@@ -2,6 +2,8 @@ import json
 import requests
 from web3 import Web3
 
+from curve.veCRV import get_ve_crv_balance
+
 erc20_min_abi = """
 [
   {
@@ -157,8 +159,9 @@ def get_balance(account_address):
     value_crypto_pool = get_crypto_balance(account_address)
     value_main_pool = get_main_balance(account_address)
     value_factory_crypto_pool = get_factory_crypto_balance(account_address)
-    value = value_factory_pool + value_crypto_pool + value_main_pool + value_factory_crypto_pool
+    ve_crv_value = get_ve_crv_balance(account_address)
+    value = value_factory_pool + value_crypto_pool + value_main_pool + value_factory_crypto_pool + ve_crv_value
     print('value', value)
 
-
+# TODO 第三方farming的池子没找到
 get_balance(test_address)

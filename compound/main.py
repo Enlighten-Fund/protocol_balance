@@ -177,4 +177,7 @@ def get_erc20_real_amount(amount, erc20_address):
     real_amount = amount / math.pow(10, decimals)
     return real_amount
 
+# TODO get reward 失败
+# get_compound_reward(test_address)
+
 get_compound_value(test_address)
