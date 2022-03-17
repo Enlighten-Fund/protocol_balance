@@ -1,0 +1,6 @@
+from curve.old.stable_factory_pool import get_stable_factory_pool_balance
+
+test_address = '0xb258ad4125e84068f3a47fbbc4f6aced2bc148ec'
+
+get_stable_factory_pool_balance(test_address)
+# get_ve_crv_balance(test_address)
