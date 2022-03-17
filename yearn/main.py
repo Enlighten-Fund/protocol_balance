@@ -179,5 +179,6 @@ def get_aToken_price(contract_address):
         price = res[key]['usd']
     return price
 
+# TODO v3未完成
 get_value(test_address_type_v2)
 
